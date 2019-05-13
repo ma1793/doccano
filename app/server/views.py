@@ -47,6 +47,13 @@ class LabelView(SuperUserMixin, LoginRequiredMixin, TemplateView):
     }
 
 
+class UserManagementView(SuperUserMixin, LoginRequiredMixin, TemplateView):
+    template_name = 'admin.html'
+    extra_context = {
+        'bundle_name': 'user_management'
+    }
+
+
 class StatsView(SuperUserMixin, LoginRequiredMixin, TemplateView):
     template_name = 'admin.html'
     extra_context = {

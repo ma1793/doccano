@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views import IndexView
 from .views import ProjectView, DatasetView, DataUpload, LabelView, StatsView, GuidelineView
-from .views import ProjectsView, DataDownload
+from .views import ProjectsView, DataDownload, UserManagementView
 from .views import DemoTextClassification, DemoNamedEntityRecognition, DemoTranslation
 
 
@@ -23,6 +23,8 @@ urlpatterns = [
          StatsView.as_view(), name='stats'),
     path('projects/<int:project_id>/guideline/',
          GuidelineView.as_view(), name='guideline'),
+    path('projects/<int:project_id>/users/',
+         UserManagementView.as_view(), name='user-management'),
     path('demo/text-classification/',
          DemoTextClassification.as_view(), name='demo-text-classification'),
     path('demo/named-entity-recognition/',

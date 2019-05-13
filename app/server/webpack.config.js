@@ -16,6 +16,7 @@ module.exports = {
         'stats': './static/js/stats.js',
         'label': './static/js/label.js',
         'guideline': './static/js/guideline.js',
+        'user_management': './static/js/user_management.js',
         'demo_text_classification': './static/js/demo/demo_text_classification.js',
         'demo_named_entity': './static/js/demo/demo_named_entity.js',
         'demo_translation': './static/js/demo/demo_translation.js',
